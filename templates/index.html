@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Route Planner</title>
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+</head>
+<body>
+
+    <div class="front-page" id="frontPage">
+        <h1>SMART ROUTE PLANNER</h1>
+        <h2 class="welcome-text">WELCOME!!!!!!!!!!!!!!!</h2>
+
+        <p>Your shortcut to smarter routes...</p>
+        <button id="skipButton" class="skip-btn">Skip</button>
+        <div class="vehicles">
+            🚗 🚌 🚙 🚴 🚊
+        </div>
+    </div>
+    <div class="map-container" id="mapContainer">
+        <div id="mainContent" style="display: none;"></div>
+       
+<!-- Control section -->
+<div class="controls">
+    <input id="start" type="text" placeholder="Start Location" oninput="searchLocation(this, 'startList')" autocomplete="off" />
+    <div id="startList" class="suggestions"></div>
+
+    <input id="middle" type="text" placeholder="Middle Location" oninput="searchLocation(this, 'middleList')" autocomplete="off" />
+    <div id="middleList" class="suggestions"></div>
+
+    <input id="end" type="text" placeholder="End Location" oninput="searchLocation(this, 'endList')" autocomplete="off" />
+    <div id="endList" class="suggestions"></div>
+
+    <button onclick="calculateRoute()">Calculate Route</button>  <button onclick="resetForm()">Reset</button>
+    <button id="historyButton">Show History</button>
+    <div id="historyContainer" style="display: none;">
+        <h3>Search History</h3>
+        <div id="historyList"></div>
+</div>
+
+<!-- Map section -->
+<div id="map"></div>
+
+<!-- Routes options -->
+<div class="routes" id="route-options"></div>
+<div id="route-options-container">
+    <div class="route-box">
+        <b>Route:</b> <br> 
+        <span id="route-display"></span>
+    </div>
+
+    <div class="total-box">
+        <b>Total Distance:</b> <br>
+        <span id="total-distance"></span>
+    </div>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<script src="main.js"></script>
+<script src="{{ url_for('static', filename='main.js') }}"></script>
+
+
+
+</body>
+</html>

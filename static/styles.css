@@ -1,0 +1,259 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.front-page {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, purple, #feb47b);
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    transition: opacity 20s ease-in-out;
+}
+.front-page h1 {
+    font-size: 36px;
+    margin: 0;
+}
+.front-page p {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+@keyframes fadeIn {
+0% {
+opacity: 0;
+transform: translateY(-10px);
+}
+100% {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+.welcome-text {
+font-size: 24px;
+font-weight: bold;
+color: white;
+animation: fadeIn 2s ease-in-out;
+}
+
+.vehicles {
+display: flex;
+gap: 80px;  /* Increase space between vehicles */
+margin-top: 20px;
+font-size: 5rem; /* Make vehicles bigger */
+animation: moveVehicles 10s linear infinite;
+}
+
+@keyframes moveVehicles {
+0% {
+transform: translateX(50px) scale(1);
+}
+50% {
+transform: translateX(50px) scale(1.2); /* Scale up slightly */
+}
+100% {
+transform: translateX(-50px) scale(1);
+}
+}
+
+#map {
+    height: 100vh; /* Ensure the map fills the viewport */
+    width: 100%;
+}
+.controls {
+    padding: 15px;
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+   
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.controls input, .controls button {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+.controls button {
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+}
+.routes {
+    margin-top: 20px;
+}
+.route-option {
+    margin: 5px;
+    padding: 10px;
+    background-color: #e9ecef;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.suggestions {
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 1000;
+}
+.suggestions div {
+    padding: 10px;
+    cursor: pointer;
+}
+.suggestions div:hover {
+    background-color: #f1f1f1;
+}
+/* Container styling */
+#route-options-container {
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 10px;
+margin-top: 20px;
+}
+
+/* Box styling */
+.route-box, .distance-box, .total-box {
+width: 500px; /* Increased width for longer addresses */
+padding: 12px;
+border: 2px solid #007BFF;
+border-radius: 8px;
+background-color: #f8f9fa;
+box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+text-align: left; /* Align text properly */
+font-family: Arial, sans-serif;
+word-wrap: break-word; /* Ensures long addresses don't overflow */
+}
+
+.total-box {
+border-color: #28a745;
+background-color: #eafaea;
+text-align: center;
+}
+
+b {
+color: #007BFF;
+}
+
+.total-box b {
+color: #28a745;
+}
+
+
+
+/* Positioning the Skip Button */
+.skip-btn {
+position: absolute;
+bottom: 30px;
+right: 30px;
+padding: 12px 24px;
+font-size: 18px;
+color: white;
+background-color: #ff5733;
+border: none;
+border-radius: 8px;
+cursor: pointer;
+transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+/* Hover effect */
+.skip-btn:hover {
+background-color: #ff2e00;
+transform: scale(1.1);
+}
+
+/* Fade-out effect */
+.fade-out {
+opacity: 0;
+transition: opacity 0.8s ease-out;
+pointer-events: none;
+}
+
+.dropdown-btn {
+background: linear-gradient(135deg, purple, #feb47b);
+color: white;
+padding: 12px;
+border: none;
+cursor: pointer;
+border-radius: 25px;
+transition: all 0.3s ease;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.dropdown-btn:hover {
+background: linear-gradient(135deg, purple, #feb47b);
+transform: scale(1.05);
+}
+.route-segment {
+margin: 15px 0;
+padding: 15px;
+border-radius: 15px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+background: #ffffff;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.route-segment:hover {
+transform: translateY(-10px);
+box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.transport-modes {
+padding: 15px;
+border-radius: 10px;
+animation: fadeIn 0.3s ease;
+}
+
+.mode-walking { color: black; }
+.mode-bus { color:  black; }
+.mode-car { color:  black; }
+.mode-motorbike { color:  black; }
+.mode-train { color:  black; }
+
+ul {
+list-style: none;
+padding: 0;
+}
+li {
+padding: 10px 0;
+font-size: 18px;
+display: flex;
+align-items: center;
+}
+
+@keyframes fadeIn {
+from { opacity: 0; transform: translateY(-10px); }
+to { opacity: 1; transform: translateY(0); }
+}
+
+.history-container {
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.history-item {
+    padding: 5px;
+    cursor: pointer;
+    border-bottom: 1px solid #ccc;
+}
+
+.history-item:hover {
+    background-color: #f0f0f0;
+}
+
+
