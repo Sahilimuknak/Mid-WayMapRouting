@@ -23,7 +23,7 @@ It supports multiple transport modes, cost estimation, and displays results on a
 
 - **Frontend**: HTML, CSS, JavaScript, [Leaflet.js](https://leafletjs.com/)
 - **Backend**: Python, [Flask](https://flask.palletsprojects.com/)
-- **Routing Engine**: OSRM, Custom Dijkstra & A* implementations
+- **Routing Engine**: OSRM, Custom Dijkstra implementations
 
 
 
