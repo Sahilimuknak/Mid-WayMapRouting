@@ -31,5 +31,35 @@ It supports multiple transport modes, cost estimation, and displays results on a
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your-username/map-route-planner.git
-   cd map-route-planner
+   git clone https://github.com/Sahilimuknak/Mid-WayMapRouting.git
+   cd Routeplanner
+2. Set up a Python virtual environment:
+     python -m venv venv
+     source venv/bin/activate  # or venv\Scripts\activate on Windows
+
+3. Install dependencies:
+    pip install -r requirements.txt
+   
+5. Run the Flask app:
+   python app.py
+   
+7. Visit the app in your browser:
+    http://localhost:5000
+
+.
+
+📂 Project Structure
+
+├── app.py                  # Flask backend
+├── templates/              # HTML files
+├── static/                 # JS, CSS, and images
+├── routing/                # Dijkstra & A* logic
+├── requirements.txt
+└── README.md
+
+📖 Future Improvements
+✅ Live traffic-aware routing
+✅ Real-time cost adjustment based on mode
+🔄 User authentication and saved routes
+📈 Route analytics and usage stats
+
