@@ -1,7 +1,7 @@
 # 🌍 Map Route Planner
 
 An interactive web-based route planner that calculates the **shortest** and **fastest** paths 
-between two or more locations using algorithms like **Dijkstra**, **A\***, and services like **OSRM** and **Google Maps API**.
+between two or more locations using algorithms like **Dijkstra** and services like **OSRM** .
 It supports multiple transport modes, cost estimation, and displays results on a Leaflet-powered world map.
 
 
@@ -52,8 +52,8 @@ It supports multiple transport modes, cost estimation, and displays results on a
 
 ├── app.py                  # Flask backend
 ├── templates/              # HTML files
-├── static/                 # JS, CSS, and images
-├── routing/                # Dijkstra & A* logic
+├── static/                 # JS, CSS
+├── routing/                # Dijkstra  logic
 ├── requirements.txt
 └── README.md
 
