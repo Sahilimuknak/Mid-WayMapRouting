@@ -32,7 +32,7 @@ It supports multiple transport modes, cost estimation, and displays results on a
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/Sahilimuknak/Mid-WayMapRouting.git
-   cd Routeplanner
+   cd Mid-WayMapRouting
 2. Set up a Python virtual environment:
      python -m venv venv
      source venv/bin/activate  # or venv\Scripts\activate on Windows
